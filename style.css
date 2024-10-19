@@ -367,3 +367,14 @@
 	margin-left: 50px;
 	font-weight: 600;
 }
+.aboutus-header{
+	font-weight: 500;
+	margin-left: 50px;
+	color: gray;
+}
+
+.aboutus-desc{
+	font-weight: 600;
+	margin-left: 50px;
+	max-width: 40%;
+}
