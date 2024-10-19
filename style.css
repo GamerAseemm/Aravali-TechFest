@@ -309,12 +309,12 @@
 	height: auto;
 	padding-top: 20px;
 	padding-left: 15%;
+	position: fixed;
 }
 .navbar li{
 	display: block;
 	font-size: 20px;
 	position: relative;
-	display: flex;
 	align-items: center;
 	color: #000000;
 	text-transform: uppercase;
@@ -358,23 +358,37 @@
 	background-color: #393285;
   }
   .bookshelf{
-	position: fixed;
-	margin-top: -70px;
-	margin-left: 50%;
+	margin-top: -350px;
+	margin-left: 60%;
+	width: 450px;
 }
 .intro{
 	max-width: 30%;
 	margin-left: 50px;
 	font-weight: 600;
+	font-size: 20px;
 }
-.aboutus-header{
-	font-weight: 500;
-	margin-left: 50px;
-	color: gray;
+#home{
+	height: 100%;
+	width: 100%;
+	padding-top: 40px;
 }
-
-.aboutus-desc{
-	font-weight: 600;
-	margin-left: 50px;
-	max-width: 40%;
+#order{
+	max-height: 100%;
+	max-width: 100%;
+}
+.order-form{
+	width: 800px;
+	height: 600px;
+	border: #000000 2px;
+}
+.home-page-text{
+	float: left;
+	width: 100%;
+}
+.image1{
+	width: 100%;
+}
+.home-content{
+	width: 100%;
 }
