@@ -381,6 +381,8 @@
 	width: 800px;
 	height: 600px;
 	border: #000000 2px;
+	margin-left: 50px;
+	margin-top: 150px;
 }
 .home-page-text{
 	float: left;
@@ -391,4 +393,54 @@
 }
 .home-content{
 	width: 100%;
+}
+.aboutus-header{
+	margin-left: 50px;
+	font-size: 30px;
+}
+.aboutus-desc{
+	margin-left: 50px;
+	max-width: 40%;
+	font-weight: 600;
+	font-size: 25px;
+}
+.about-us-form{
+	margin-top: 120px;
+}
+.place-order{
+	color: white;
+	background-color: #12783b;
+	border-radius: 20px;
+	border: none;
+	font-size: 40px;
+	transition: all 0.3s;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);	
+}
+.place-order:hover{
+	background-color: #148c44;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.order-header{
+	background-color: #e6eaee;
+	display: inline;
+	border-radius: 15px;
+}
+.order-tagline{
+	font-size: 55px;
+	max-width: 60%;
+	margin: 0;
+}
+.order-content{
+	font-weight: 600;
+	font-size: 20px;
+	max-width: 60%;
+}
+#order {
+    padding-top: 100px; /* Adjust this value as needed */
+    max-height: 100%;
+    max-width: 100%;
+}
+.reading{
+	margin-top: -340px;
+	margin-left: 100%;
 }
