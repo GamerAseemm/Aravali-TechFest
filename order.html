@@ -6,139 +6,159 @@
     <title>Place Order</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
-        body{
+        body {
             justify-content: center;
             user-select: none;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        @property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
-
-:root {
-  --card-height: 65vh;
-  --card-width: calc(var(--card-height) / 1.5);
-}
 
         .card {
-    background: #191c29;
-    padding: 1px;
-    position: relative;
-    border-radius: 6px;
-    display: flex;
-    font-size: 1.5em;
-    color: rgb(88 199 250 / 0%);
-    font-family: cursive;
-    background-color: white;
-    width: 600px;
-    height: 700px;
-    margin-left: 30%;
-}
-
-
-
-.card::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 15px;
-  background-image: linear-gradient(
-    var(--rotate)
-    , #5ddcff, #3c67e3 43%, #4e00c2);
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s linear infinite;
-}
-
-.card::after {
-  position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(
-    var(--rotate)
-    , #5ddcff, #3c67e3 43%, #393285);
-    opacity: 1;
-  transition: opacity .5s;
-  animation: spin 2.5s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    --rotate: 0deg;
-  }
-  100% {
-    --rotate: 360deg;
-  }
-}
-        .name1{
-            margin-left: 10%;
-            margin-top: 10%;
-            float:left ;
-            width: 200px;
-            height: 30px;
-            border-radius: 4px;
-            padding-left: 10px;
+            padding: 1px;
+            position: relative;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-family: cursive;
+            width: 100%;
+            height: 700px;
+            border-width: 2px;
         }
-        .name2{
-            margin-right: 5%;
-            margin-top: 10%;
-            float: right;
-            width: 200px;
-            height: 30px;
-            border-radius: 4px;
-            padding-left: 10px;
+
+        label {
+            display: block;
+            position: relative;
+            margin: 40px 0px;
+            width: 100%;
+            text-align: center; /* Optional: Center the label as well */
         }
-        .back{
+
+        input {
+            padding: 10px;
+            background: transparent;
+            border: none;
+            outline: none;
+            width: 100%; /* Set the width of the input */
+            max-width: 400px; /* Adjust max-width as needed */
+            margin: 0 auto; /* Center the input field */
+        }
+
+        .line-box {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background: #BCBCBC;
+        }
+
+        .line {
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #8BC34A;
+            transition: ease .6s;
+        }
+
+        input:focus + .line-box .line {
+            width: 100%;
+        }
+
+        .label-txt {
+            position: absolute;
+            top: -1.6em;
+            padding: 10px;
+            font-family: sans-serif;
+            font-size: .8em;
+            letter-spacing: 1px;
+            color: rgb(120, 120, 120);
+            transition: ease .3s;
+        }
+
+        .label-active {
+            top: -3em;
+        }
+
+        .back {
             text-decoration: none;
             width: 30px;
             height: 40px;
             font-size: 30px;
             color: white;
         }
-        .back-img{
+
+        .back-img {
             height: 30px;
             width: 30px;
             margin-top: 40px;
             margin-left: 40px;
         }
-        .refreshbtn{
+
+        .refreshbtn {
             color: white;
-	background-color: #393285;
-	border-radius: 20px;
-	border: none;
-	padding: 15px;
-	font-size: 15px;
-    margin-left: -40%;
-	transition: all 0.3s;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin-top: 110%;
+            background-color: #393285;
+            border-radius: 20px;
+            border: none;
+            padding: 15px;
+            font-size: 15px;
+            transition: all 0.3s;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-top: 50px;
         }
-        .refreshbtn:hover{
+
+        .refreshbtn:hover {
             background-color: #292460;
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
         }
+
     </style>
+    <!-- Adding jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <a class="back" href="index.html#order"><img class="back-img" src="png-clipart-arrow-white-arrow-miscellaneous-angle-thumbnail-removebg-preview.png" alt=""></a>
+    <a class="back" href="index.html#order">
+        <img class="back-img" src="png-clipart-arrow-white-arrow-miscellaneous-angle-thumbnail-removebg-preview.png" alt="">
+    </a>
     <div class="card">
         <form action="">
-            <input class="name1" type="text" placeholder="First Name">
-            <input class="name2" type="text" placeholder="Last Name">
+            <label>
+                <p class="label-txt">The first one</p>
+                <input type="text" class="input">
+                <div class="line-box">
+                    <div class="line"></div>
+                </div>
+            </label>
+            <label>
+                <p class="label-txt">The second one</p>
+                <input type="text" class="input">
+                <div class="line-box">
+                    <div class="line"></div>
+                </div>
+            </label>
             <button class="refreshbtn" onClick="history.go(0);">Clear Information</button>
         </form>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            $('input').focus(function(){
+                $(this).parent().find(".label-txt").addClass('label-active');
+            });
+
+            $("input").focusout(function(){
+                if ($(this).val() === '') {
+                    $(this).parent().find(".label-txt").removeClass('label-active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
