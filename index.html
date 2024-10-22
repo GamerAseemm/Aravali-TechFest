@@ -11,9 +11,9 @@
 
    <section id="home">
     
-    <div class="navbar">
+    <div id="navbar" class="navbar">
       <img class="nav-img" src="Capture-removebg-preview.png" alt="">
-      <nav class="nav">
+      <nav  class="nav">
           <ul class="ul">
               <li><a href="#home">Home</a></li>
               <li><a href="#order">Order</a></li>
@@ -127,5 +127,28 @@
         </symbol>
       </svg> -->
 </body>
- <script src="main.js"></script>
+ <script src="main.js">
+var lastScrollTop; // This Varibale will store the top position
+
+navbar = document.getElementById('navbar'); // Get The NavBar
+
+window.addEventListener('scroll',function(){
+ //on every scroll this funtion will be called
+  
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  //This line will get the location on scroll
+  
+  if(scrollTop > lastScrollTop){ //if it will be greater than the previous
+    navbar.style.top='-80px';
+    //set the value to the negetive of height of navbar 
+  }
+  
+  else{
+    navbar.style.top='0';
+  }
+  
+  lastScrollTop = scrollTop; //New Position Stored
+});
+
+ </script>
 </html>

@@ -100,6 +100,24 @@
             border-radius: 4px;
             padding-left: 10px;
         }
+        .email{
+          margin-left: 10%;
+            margin-top: 10%;
+            float:left ;
+            width: 200px;
+            height: 30px;
+            border-radius: 4px;
+            padding-left: 10px;
+        }
+        .phone{
+          margin-right: 5%;
+            margin-top: 10%;
+            float: right;
+            width: 200px;
+            height: 30px;
+            border-radius: 4px;
+            padding-left: 10px;
+        }
         .back{
             text-decoration: none;
             width: 30px;
@@ -129,14 +147,28 @@
             background-color: #292460;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
         }
+        .region{
+          margin-left: 9.7%;
+            margin-top: 10%;
+            float:left ;
+            width: 220px;
+            height: 35px;
+            border-radius: 4px;
+            padding-left: 10px;
+        }
     </style>
 </head>
 <body>
     <a class="back" href="index.html#order"><img class="back-img" src="png-clipart-arrow-white-arrow-miscellaneous-angle-thumbnail-removebg-preview.png" alt=""></a>
     <div class="card">
         <form action="">
-            <input class="name1" type="text" placeholder="First Name">
-            <input class="name2" type="text" placeholder="Last Name">
+            <input class="form name1" type="text" placeholder="First Name">
+            <input class="form name2" type="text" placeholder="Last Name">
+            <input type="text" class="form email" spellcheck="true" placeholder="Email (optional)">
+            <input type="number" placeholder="Phone" class="form phone">
+            <select name="region" placeholder="region" class="region">
+              <option value="region">State</option>
+              </select>
             <button class="refreshbtn" onClick="history.go(0);">Clear Information</button>
         </form>
     </div>
