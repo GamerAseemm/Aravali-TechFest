@@ -10,7 +10,6 @@
 <body>
 
    <section id="home">
-    
     <div id="navbar" class="navbar">
       <img class="nav-img" src="Capture-removebg-preview.png" alt="">
       <nav  class="nav">
@@ -37,9 +36,6 @@
         <img class="bookshelf" src="bg.avif" alt="Bookshelf">
       </div>
     </div>
-    
-    
-
   
 </p>
 </section> 
@@ -63,35 +59,31 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor, 
             sem a pretium sagittis, quam felis rhoncus neque, sed ultrices tellus velit nec turpis.
             Aliquam ac blandit urna. Donec tincidunt risus ligula, sed blandit turpis scelerisque
-              id. Integer justo ante, gravida ut facilisis cursus, molestie et massa. Nunc in auctor nibh.
-              Curabitur ac volutpat risus. Sed scelerisque ultricies sapien, et ullamcorper risus lobortis
-              a. Praesent ac nisl magna.
+            id. Integer justo ante, gravida ut facilisis cursus, molestie et massa. Nunc in auctor nibh.
+            Curabitur ac volutpat risus. Sed scelerisque ultricies sapien, et ullamcorper risus lobortis
+            a. Praesent ac nisl magna.
           </p>
         </div>
         <p></p>
       </section>
 </body>
+
  <script src="main.js">
-var lastScrollTop; // This Varibale will store the top position
+var lastScrollTop; 
 
-navbar = document.getElementById('navbar'); // Get The NavBar
+navbar = document.getElementById('navbar'); 
 
-window.addEventListener('scroll',function(){
- //on every scroll this funtion will be called
-  
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  //This line will get the location on scroll
-  
-  if(scrollTop > lastScrollTop){ //if it will be greater than the previous
+window.addEventListener('scroll',function(){  
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;  
+  if(scrollTop > lastScrollTop){
     navbar.style.top='-80px';
-    //set the value to the negetive of height of navbar 
   }
   
   else{
     navbar.style.top='0';
   }
   
-  lastScrollTop = scrollTop; //New Position Stored
+  lastScrollTop = scrollTop;
 });
 
  </script>
