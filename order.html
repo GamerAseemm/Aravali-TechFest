@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place Order</title>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
         body {
             justify-content: center;
             user-select: none;
@@ -27,62 +26,55 @@
             justify-content: center;
             align-items: center;
             font-size: 1.5em;
-            font-family: cursive;
             width: 400px;
             background-color: #fff;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
-        label {
-            display: block;
+        .form-group {
             position: relative;
-            margin: 20px 0px;
+            margin: 20px 0;
             width: 100%;
-            text-align: center;
         }
 
-        input, select {
-            width: 100%; /* Ensure input fields take the full width of the form */
+        .form-group input, .form-group select {
+            width: 100%; 
             padding: 10px;
-            margin-top: 20px;
-            margin-bottom: 10px;
             font-size: 1em;
             border: 2px solid #ccc;
             border-radius: 8px;
             outline: none;
             transition: all 0.3s ease;
-            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            box-sizing: border-box;
+            background-color: white;
         }
 
-
-        input:focus, select:focus {
+        .form-group input:focus, .form-group select:focus {
             border-color: #393285;
             box-shadow: 0 0 8px rgba(57, 50, 133, 0.4);
         }
 
-        input::placeholder {
-            color: #999;
-            transition: color 0.3s ease;
-        }
-
-        input:focus::placeholder {
-            color: transparent;
-        }
-
-        .back {
-            text-decoration: none;
-            width: 30px;
-            height: 40px;
-            font-size: 30px;
-            color: white;
+        .form-group label {
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 50%;
+            left: 10px;
+            color: #999;
+            font-size: 1em;
+            pointer-events: none;
+            transform: translateY(-50%);
+            transition: 0.3s ease all;
+            background-color: #fff;
+            padding: 0 5px;
         }
 
-        .back-img {
-            height: 30px;
-            width: 30px;
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label,
+        .form-group select:focus + label,
+        .form-group select:not([value=""]) + label {
+            top: -2px;
+            left: 10px;
+            font-size: 0.75em;
+            color: #393285;
         }
 
         .refreshbtn {
@@ -96,7 +88,7 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             margin-top: 20px;
             cursor: pointer;
-            width: 100%; /* Button width matches input field width */
+            width: 100%; 
         }
 
         .refreshbtn:hover {
@@ -114,81 +106,101 @@
             -moz-appearance: none;
             background-color: white;
             cursor: pointer;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiMzOTMyODUiIGQ9Ik04IDEwLjQxTDIuNTkgNSAyLjAyIDUuNTUgOCAxMC45M2w1OTk2IC0xNjguMzguNzguNzguNzguNzguNzggIi8+Cjwvc3ZnPg==');
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiMzOTMyODUiIGQ9Ik04IDEwLjQxTDIuNTkgNSAyLjAyIDUuNTUgOCAxMC45M2w1OTk2IC0xNjguNzguNzguNzguNzguNzggIi8+Cjwvc3ZnPg==');
             background-repeat: no-repeat;
             background-position: right 10px center;
         }
 
+        .back {
+            text-decoration: none;
+            font-size: 30px;
+            color: white;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #393285;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .back img {
+            width: 20px;
+            height: 20px;
+        }
+
     </style>
-    <!-- Adding jQuery Library -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <a class="back" href="index.html#order">
-        <img class="back-img" src="png-clipart-arrow-white-arrow-miscellaneous-angle-thumbnail-removebg-preview.png" alt="back">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/left.png" alt="back">
     </a>
     <div class="card">
         <form action="">
-            <input class="form name1" type="text" placeholder="First Name">
-            <input class="form name2" type="text" placeholder="Last Name">
-            <input type="text" class="form email" spellcheck="true" placeholder="Email (optional)">
-            <input type="number" placeholder="Phone" class="form phone">
-            <select name="region" class="region">
-                <option value="region">Select State</option>
-                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                <option value="Assam">Assam</option>
-                <option value="Bihar">Bihar</option>
-                <option value="Chandigarh">Chandigarh</option>
-                <option value="Chhattisgarh">Chhattisgarh</option>
-                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-                <option value="Daman and Diu">Daman and Diu</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Goa">Goa</option>
-                <option value="Gujarat">Gujarat</option>
-                <option value="Haryana">Haryana</option>
-                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                <option value="Jharkhand">Jharkhand</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Kerala">Kerala</option>
-                <option value="Ladakh">Ladakh</option>
-                <option value="Lakshadweep">Lakshadweep</option>
-                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                <option value="Maharashtra">Maharashtra</option>
-                <option value="Manipur">Manipur</option>
-                <option value="Meghalaya">Meghalaya</option>
-                <option value="Mizoram">Mizoram</option>
-                <option value="Nagaland">Nagaland</option>
-                <option value="Odisha">Odisha</option>
-                <option value="Puducherry">Puducherry</option>
-                <option value="Punjab">Punjab</option>
-                <option value="Rajasthan">Rajasthan</option>
-                <option value="Sikkim">Sikkim</option>
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Telangana">Telangana</option>
-                <option value="Tripura">Tripura</option>
-                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                <option value="Uttarakhand">Uttarakhand</option>
-                <option value="West Bengal">West Bengal</option>          
-            </select>
+            <div class="form-group">
+                <input type="text" class="form name1" placeholder=" " required>
+                <label>First Name</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form name2" placeholder=" " required>
+                <label>Last Name</label>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form email" placeholder=" " required>
+                <label>Email (optional)</label>
+            </div>
+            <div class="form-group">
+                <input type="number" placeholder=" " class="form phone" required>
+                <label>Phone</label>
+            </div>
+            <div class="form-group">
+                <select name="region" class="region" required>
+                    <option value="">Select State</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Ladakh">Ladakh</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>          
+                </select>
+            </div>
             <button class="refreshbtn" onClick="history.go(0); return false;">Clear Information</button>
         </form>
     </div>
-
-    <script>
-        $(document).ready(function(){
-            $('input').focus(function(){
-                $(this).parent().find(".label-txt").addClass('label-active');
-            });
-
-            $("input").focusout(function(){
-                if ($(this).val() === '') {
-                    $(this).parent().find(".label-txt").removeClass('label-active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
