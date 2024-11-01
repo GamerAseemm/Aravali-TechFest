@@ -265,3 +265,33 @@ html{
 .hidden-navbar {
 	top: -200px; 
   }
+  .hr{
+	width: 90%;
+	background-color: rgb(128, 126, 126);
+	margin-top: -5px;
+  }
+  .uppersection{
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  }
+  .lowersection{
+	text-align: center;
+  }
+  h1{
+	color: #393285;
+	font-size: 50px;
+  }
+  h4{
+	color: #393285;
+	font-size: 25px;
+  }
+  .faqimg{
+	height: 300px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+  }
+  .h4{
+	color: #393285;
+	font-size: 40px;
+  }
