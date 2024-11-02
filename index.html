@@ -6,6 +6,7 @@
     <title>MEGALIB</title>
     <link rel="stylesheet" href="style.css ">
     <link rel="shortcut icon" type="image/x-icon" href="icon.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
 <body>
 
@@ -56,45 +57,78 @@
   <div class="uppersection">
     <h1>Do You Have Questions ?</h1>
     <h4>We have answers (Well, most of the time)</h4>
-    <img src="bubble_background_cropped_image.png" alt="" class="faqimg">
+    <img src="tiny-people-sitting-standing-near-giant-faq_74855-7879.avif" alt="" class="faqimg">
+    <hr class="hr">
   </div>
-  <hr class="hr">
   <div class="lowersection">
     <h4 class="h4">Faq</h4>
     
-    <div class="plus">+</div>
-      <div class="faq-question">
-        <input id="q1" type="checkbox" class="panel">
-        <label for="q1" class="panel-title">What is AGRO AI?</label>
-        
-        <div class="panel-content">AGRO AI is an AI chatbot which provides you quick and straight forward answers to your agriculture problems.</div>
-      </div>
-      <div class="plus">+</div>
-      <div class="faq-question">
-        <input id="q2" type="checkbox" class="panel">
-        <label for="q2" class="panel-title">Why AGRO AI?</label>
-        <div class="panel-content">AGRo AI is the fastest and the most relaible source for 1 to 1 help for your agricultural problems.</div>
+    <div class="faqs-container">
+      <div class="faq active">
+        <h3 class="faq-title">
+          Why shouldn't we trust atoms?
+        </h3>
+        <p class="faq-text">
+          They make up everything.
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
       </div>
       
-      <div class="plus">+</div>
-      <div class="faq-question">
-        <input id="q4" type="checkbox" class="panel">
-        <label for="q4" class="panel-title">What impact does Agro AI aim to have?</label>
-        <div class="panel-content">AGRO AI aims to positively impact underserved communities by solving queries related to agriculture using natural language technology.</div>
+      <div class="faq">
+        <h3 class="faq-title">
+          What do you call someone with no body and no nose?
+        </h3>
+        <p class="faq-text">
+          Nobody knows.
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
       </div>
-      <div class="plus">+</div>
-      <div class="faq-question">
-        <input id="q5" type="checkbox" class="panel">
-        <label for="q5" class="panel-title">Is AGRO AI available 24/7?</label>
-        <div class="panel-content">Yes, Agro AI is available 24/7 and can be accessed through any web service device. </div>
+      
+      <div class="faq">
+        <h3 class="faq-title">
+          What's the object-oriented way to become wealthy?
+        </h3>
+        <p class="faq-text">
+          Inheritance.
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
       </div>
-      <div class="plus">+</div>
-      <div class="faq-question">
-        <input id="q6" type="checkbox" class="panel">
-        <label for="q6" class="panel-title">Does Agro AI support multiple languages?</label>
-        <div class="panel-content">Agro AI supports multiple languages, especially considering its target audience in India.</div>
+      
+      <div class="faq">
+        <h3 class="faq-title">
+          How many tickles does it take to tickle an octopus?
+        </h3>
+        <p class="faq-text">
+          Ten-tickles!
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
       </div>
-  </div>
+      
+      <div class="faq">
+        <h3 class="faq-title">
+          What is: 1 + 1?
+        </h3>
+        <p class="faq-text">
+          Depends on who are you asking.
+        </p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
 </section>
       <section id="about-us">
         <div class="about-us-form">
@@ -113,22 +147,5 @@
 </body>
 
  <script src="main.js">
-var lastScrollTop; 
-
-navbar = document.getElementById('navbar'); 
-
-window.addEventListener('scroll',function(){  
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;  
-  if(scrollTop > lastScrollTop){
-    navbar.style.top='-80px';
-  }
-  
-  else{
-    navbar.style.top='0';
-  }
-  
-  lastScrollTop = scrollTop;
-});
-
  </script>
 </html>

@@ -16,8 +16,14 @@
   });
   document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', function() {
-      disableScrollDetection = true; 
     });
   });
 
-  
+  //faq section
+  const toggles = document.querySelectorAll('.faq-toggle');
+
+toggles.forEach(toggle => {
+	toggle.addEventListener('click', () => {
+		toggle.parentNode.classList.toggle('active');
+	});
+});
