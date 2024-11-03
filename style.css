@@ -235,6 +235,7 @@ html{
 	font-size: 35px;
 	transition: all 0.3s;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);	
+	cursor: pointer;
 }
 .place-order:hover{
 	background-color: #292460;
@@ -290,9 +291,9 @@ html{
 	font-size: 25px;
   }
   .faqimg{
-	height: 250px;
+	height: 300px;
 	padding-bottom: 0;
-	margin-bottom: 20px;
+	margin-bottom: -25px;
   }
   .h4{
 	color: #393285;
@@ -393,3 +394,58 @@ html{
 .faq.active .faq-toggle .fa-chevron-down {
 	display: none;
 }
+.faq-toggle {
+	background-color: transparent;
+	border: none;
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	padding: 0;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	height: 30px;
+	width: 30px;
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .faq-toggle i {
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .faq.active .faq-toggle {
+	transform: rotate(-180deg);
+  }
+  
+  .faq.active .faq-toggle i {
+	transform: rotate(45deg);
+  }
+  
+  .faq-toggle:focus {
+	outline: none;
+  }
+  
+  .faq.active .faq-toggle {
+	background-color: #9FA4A8;
+  }
+  
+  .faq-toggle .fa-times {
+	display: none;
+  }
+  
+  .faq.active .faq-toggle .fa-times {
+	display: block;
+  }
+  
+  .faq-toggle .fa-chevron-down {
+	color: #83888E;
+  }
+  
+  .faq.active .faq-toggle .fa-chevron-down {
+	display: none;
+  }
+  
