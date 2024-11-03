@@ -1,196 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Place Order</title>
     <style>
-        body {
-            justify-content: center;
-            user-select: none;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f7f7f7;
-        }
+      body {
+        justify-content: center;
+        user-select: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f7f7f7;
+      }
 
-        .card {
-            padding: 20px;
-            position: relative;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5em;
-            width: 400px;
-            background-color: #fff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
+      .card {
+        padding: 20px;
+        position: relative;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        width: 400px;
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
 
-        .form-group {
-            position: relative;
-            margin: 20px 0;
-            width: 100%;
-        }
+      .form-group {
+        position: relative;
+        margin: 20px 0;
+        width: 100%;
+      }
 
-        .form-group input, .form-group select {
-            width: 100%; 
-            padding: 10px;
-            font-size: 1em;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            outline: none;
-            transition: all 0.3s ease;
-            box-sizing: border-box;
-            background-color: white;
-        }
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        background-color: white;
+      }
 
-        .form-group input:focus, .form-group select:focus {
-            border-color: #393285;
-            box-shadow: 0 0 8px rgba(57, 50, 133, 0.4);
-        }
+      .form-group input:focus,
+      .form-group select:focus {
+        border-color: #393285;
+        box-shadow: 0 0 8px rgba(57, 50, 133, 0.4);
+      }
 
-        .form-group label {
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            color: #999;
-            font-size: 1em;
-            pointer-events: none;
-            transform: translateY(-50%);
-            transition: 0.3s ease all;
-            background-color: #fff;
-            padding: 0 5px;
-        }
+      .form-group label {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        color: #999;
+        font-size: 1em;
+        pointer-events: none;
+        transform: translateY(-50%);
+        transition: 0.3s ease all;
+        background-color: #fff;
+        padding: 0 5px;
+      }
 
-        .form-group input:focus + label,
-        .form-group input:not(:placeholder-shown) + label,
-        .form-group select:focus + label,
-        .form-group select:not([value=""]) + label {
-            top: -2.5px;
-            left: 10px;
-            font-size: 0.75em; 
-            color: #393285;
-        }
+      .form-group input:focus + label,
+      .form-group input:not(:placeholder-shown) + label,
+      .form-group select:focus + label,
+      .form-group select:not([value=""]) + label {
+        top: -2.5px;
+        left: 10px;
+        font-size: 0.75em;
+        color: #393285;
+      }
 
-        .submit-btn, .next-btn {
-            color: white;
-            background-color: #393285;
-            border-radius: 20px;
-            border: none;
-            padding: 15px;
-            font-size: 15px;
-            transition: all 0.3s;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
-            cursor: pointer;
-            width: 100%; 
-        }
+      .submit-btn,
+      .next-btn {
+        color: white;
+        background-color: #393285;
+        border-radius: 20px;
+        border: none;
+        padding: 15px;
+        font-size: 15px;
+        transition: all 0.3s;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+        cursor: pointer;
+        width: 100%;
+      }
 
-        .submit-btn:hover, .next-btn:hover {
-            background-color: #292460;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.24);
-        }
+      .submit-btn:hover,
+      .next-btn:hover {
+        background-color: #292460;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.24);
+      }
 
-        .submit-btn:active, .next-btn:active {
-            transform: scale(0.98);
-        }
+      .submit-btn:active,
+      .next-btn:active {
+        transform: scale(0.98);
+      }
 
-        .hidden {
-            display: none;
-        }
-        .region{
-            margin-top: 10px;
-        }
+      .hidden {
+        display: none;
+      }
+      .region {
+        margin-top: 10px;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .order-list {
+        width: 300px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .icon {
+        font-size: 24px;
+        color: #393285;
+      }
+
+      .order-list-container.hidden {
+        display: none;
+      }
+
+      .order-list-container.show {
+        display: block;
+      }
     </style>
-</head>
-<body>
-    <div class="card">
+  </head>
+  <body>
+    <div class="container">
+      <div id="order-list-container" class="order-list-container hidden">
+        <div id="order-list" class="order-list"></div>
+      </div>
+      <div class="card">
         <form id="personal-form">
-            <div class="form-group">
-                <input type="text" class="form name1" placeholder=" " required>
-                <label>First Name</label>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form name2" placeholder=" " required>
-                <label>Last Name</label>
-            </div>
-            <div class="form-group">
-                <input type="email" class="form email" placeholder=" " required>
-                <label>Email (optional)</label>
-            </div>
-            <div class="form-group">
-                <input type="number" placeholder=" " class="form phone" required>
-                <label>Phone</label>
-            </div>
-            <div class="form-group">
-                <select name="region" class="region" required>
-                    <option value="">Select State</option>
-                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                    <option value="Andhra Pradesh">Andhra Pradesh</option>
-                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                    <option value="Assam">Assam</option>
-                    <option value="Bihar">Bihar</option>
-                    <option value="Chandigarh">Chandigarh</option>
-                    <option value="Chhattisgarh">Chhattisgarh</option>
-                    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
-                    <option value="Delhi">Delhi</option>
-                    <option value="Goa">Goa</option>
-                    <option value="Gujarat">Gujarat</option>
-                    <option value="Haryana">Haryana</option>
-                    <option value="Himachal Pradesh">Himachal Pradesh</option>
-                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                    <option value="Jharkhand">Jharkhand</option>
-                    <option value="Karnataka">Karnataka</option>
-                    <option value="Kerala">Kerala</option>
-                    <option value="Ladakh">Ladakh</option>
-                    <option value="Lakshadweep">Lakshadweep</option>
-                    <option value="Madhya Pradesh">Madhya Pradesh</option>
-                    <option value="Maharashtra">Maharashtra</option>
-                    <option value="Manipur">Manipur</option>
-                    <option value="Meghalaya">Meghalaya</option>
-                    <option value="Mizoram">Mizoram</option>
-                    <option value="Nagaland">Nagaland</option>
-                    <option value="Odisha">Odisha</option>
-                    <option value="Puducherry">Puducherry</option>
-                    <option value="Punjab">Punjab</option>
-                    <option value="Rajasthan">Rajasthan</option>
-                    <option value="Sikkim">Sikkim</option>
-                    <option value="Tamil Nadu">Tamil Nadu</option>
-                    <option value="Telangana">Telangana</option>
-                    <option value="Tripura">Tripura</option>
-                    <option value="Uttar Pradesh">Uttar Pradesh</option>
-                    <option value="Uttarakhand">Uttarakhand</option>
-                    <option value="West Bengal">West Bengal</option>
-                </select>
-                </div>
-            <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+          <div class="form-group">
+            <input type="text" class="form name1" placeholder=" " required />
+            <label>First Name</label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form name2" placeholder=" " required />
+            <label>Last Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form email" placeholder=" " required />
+            <label>Email (optional)</label>
+          </div>
+          <div class="form-group">
+            <input type="number" placeholder=" " class="form phone" required />
+            <label>Phone</label>
+          </div>
+          <div class="form-group">
+            <select name="region" class="region" required>
+              <option value="">Select State</option>
+              <option value="Andaman and Nicobar Islands">
+                Andaman and Nicobar Islands
+              </option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Dadra and Nagar Haveli and Daman and Diu">
+                Dadra and Nagar Haveli and Daman and Diu
+              </option>
+              <option value="Delhi">Delhi</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Ladakh">Ladakh</option>
+              <option value="Lakshadweep">Lakshadweep</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Puducherry">Puducherry</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="West Bengal">West Bengal</option>
+            </select>
+          </div>
+          <div class="error-message" style="display: none">
+            Please fill out all fields before proceeding.
+          </div>
+          <button type="button" class="next-btn" onclick="nextStep()">
+            Next
+          </button>
         </form>
 
         <form id="product-form" class="hidden">
-            <div class="form-group">
-                <input type="text" class="form bookname" placeholder=" " required>
-                <label>Book Name</label>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form author" placeholder=" " required>
-                <label>Book Author</label>
-            </div>
-            
-            <button type="submit" class="submit-btn">Submit Order</button>
-        </form>
-    </div>
+          <div class="form-group">
+            <input type="text" class="form bookname" placeholder=" " required />
+            <label>Book Name</label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form author" placeholder=" " required />
+            <label>Book Author</label>
+          </div>
 
+          <button type="submit" class="submit-btn">Submit Order</button>
+        </form>
+      </div>
+    </div>
     <script>
-        function nextStep() {
-            document.getElementById('personal-form').classList.add('hidden');
-            document.getElementById('product-form').classList.remove('hidden');
+      let orders = [];
+
+      function nextStep() {
+        const personalForm = document.getElementById("personal-form");
+        const requiredFields = personalForm.querySelectorAll("[required]");
+
+        if (!validatePersonalForm(requiredFields)) {
+          showMessage("Please fill out all fields before proceeding.");
+          setTimeout(() => {
+            hideMessage();
+          }, 2000);
+          return;
         }
+        document.getElementById("personal-form").classList.add("hidden");
+        document.getElementById("product-form").classList.remove("hidden");
+      }
+
+      function validatePersonalForm(fields) {
+        for (let i = 0; i < fields.length; i++) {
+          const field = fields[i];
+          if (field.value.trim() === "") {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      function showMessage(message) {
+        const errorMessageElement = document.querySelector(".error-message");
+        errorMessageElement.textContent = message;
+        errorMessageElement.style.display = "block";
+      }
+
+      function hideMessage() {
+        const errorMessageElement = document.querySelector(".error-message");
+        errorMessageElement.style.display = "none";
+      }
+
+      function submitOrder() {
+        const bookName = document.querySelector(".bookname").value;
+        const author = document.querySelector(".author").value;
+
+        const newOrder = {
+          name: bookName,
+          cost: 0,
+          icon: '<i class="fas fa-hanger"></i>',
+        };
+
+        orders.push(newOrder);
+
+        document.querySelector(".bookname").value = "";
+        document.querySelector(".author").value = "";
+
+        renderOrderList();
+      }
+
+      function renderOrderList() {
+        const orderListElement = document.getElementById("order-list");
+        orderListElement.innerHTML = "";
+        if (orders.length > 0) {
+          document
+            .getElementById("order-list-container")
+            .classList.remove("hidden");
+          document.getElementById("order-list-container").classList.add("show");
+
+          orders.forEach((order, index) => {
+            const listItem = document.createElement("div");
+            listItem.className = "list-item";
+
+            const iconElement = document.createElement("span");
+            iconElement.innerHTML = order.icon;
+            iconElement.className = "icon";
+            listItem.appendChild(iconElement);
+
+            const nameElement = document.createElement("span");
+            nameElement.textContent = order.name;
+            listItem.appendChild(nameElement);
+
+            const costElement = document.createElement("span");
+            costElement.textContent = `$${order.cost.toFixed(2)}`;
+            listItem.appendChild(costElement);
+
+            orderListElement.appendChild(listItem);
+          });
+        }
+      }
+
+      document
+        .querySelector(".submit-btn")
+        .addEventListener("click", submitOrder);
+      document
+        .getElementById("product-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          submitOrder();
+        });
     </script>
-</body>
+  </body>
 </html>
-    
