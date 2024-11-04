@@ -19,12 +19,7 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(50, 42, 192);
-  background: linear-gradient(
-    rgba(16, 12, 89, 1) 0%,
-    rgba(10, 69, 158, 1) 50%,
-    rgb(11, 96, 175) 100%
-  );
+  background: #393285;
   background-clip: padding-box;
   border-radius: 9999px;
 }
@@ -126,7 +121,7 @@ strong {
 .nav {
   float: right;
   margin-top: 15%;
-  margin-left: 30%;
+  margin-left: 25%;
 }
 .navbar li {
   display: block;
@@ -461,5 +456,8 @@ img {
   border: 4px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
   border-radius: 9999px;
-  background-color: #aaaaaa;
+  background-color: #393285;
+}
+#customer-service {
+  padding-top: 1000px;
 }
