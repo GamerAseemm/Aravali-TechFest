@@ -18,7 +18,6 @@ document.querySelectorAll(".navbar a").forEach((link) => {
   link.addEventListener("click", function () {});
 });
 
-//faq section
 const toggles = document.querySelectorAll(".faq-toggle");
 
 toggles.forEach((toggle) => {

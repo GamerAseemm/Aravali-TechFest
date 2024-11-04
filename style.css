@@ -423,10 +423,6 @@ h4 {
   transform: rotate(-180deg);
 }
 
-.faq.active .faq-toggle i {
-  transform: rotate(45deg);
-}
-
 .faq-toggle:focus {
   outline: none;
 }
