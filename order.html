@@ -15,6 +15,8 @@
         align-items: center;
         justify-content: center;
         background-color: #f7f7f7;
+        background-image: url("https://img.freepik.com/premium-photo/playful-minimalistic-flat-design-with-abstract-shapes-decorative-dots-clean-background_912383-8500.jpg?semt=ais_hybrid");
+        background-repeat: none;
       }
 
       .card {
@@ -113,9 +115,9 @@
       }
       .container {
         display: flex;
+        height: 100vh;
         justify-content: space-between;
         align-items: center;
-        height: 100vh;
       }
 
       .order-list {
@@ -124,12 +126,12 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding-right: 20px;
       }
 
       .list-item {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         margin-bottom: 15px;
       }
 
@@ -145,12 +147,25 @@
       .order-list-container.show {
         display: block;
       }
+
+      .order-list-scroll {
+        height: 500px;
+        overflow-y: auto;
+        padding: 10px;
+      }
+
+      .order-list-item {
+        margin-bottom: 10px;
+      }
     </style>
   </head>
   <body>
+    <button class="direct">click me</button>
     <div class="container">
       <div id="order-list-container" class="order-list-container hidden">
-        <div id="order-list" class="order-list"></div>
+        <div id="order-list" class="order-list">
+          <div id="order-list-scroll" class="order-list-scroll"></div>
+        </div>
       </div>
       <div class="card">
         <form id="personal-form">
@@ -317,12 +332,18 @@
             listItem.appendChild(nameElement);
 
             const costElement = document.createElement("span");
-            costElement.textContent = `$${order.cost.toFixed(2)}`;
+            costElement.textContent = `₹${Math.trunc(
+              Math.random() * (1000 - 500) + 500
+            )}`;
             listItem.appendChild(costElement);
-
             orderListElement.appendChild(listItem);
           });
         }
+      }
+
+      function direct() {
+        document.getElementById("personal-form").classList.add("hidden");
+        document.getElementById("product-form").classList.remove("hidden");
       }
 
       document
@@ -334,6 +355,7 @@
           e.preventDefault();
           submitOrder();
         });
+      document.querySelector(".direct").addEventListener("click", direct);
     </script>
   </body>
 </html>
