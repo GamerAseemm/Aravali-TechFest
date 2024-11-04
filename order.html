@@ -127,6 +127,7 @@
         border-radius: 10px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         padding-right: 20px;
+        position: fixed;
       }
 
       .list-item {
@@ -148,12 +149,6 @@
         display: block;
       }
 
-      .order-list-scroll {
-        height: 500px;
-        overflow-y: auto;
-        padding: 10px;
-      }
-
       .order-list-item {
         margin-bottom: 10px;
       }
@@ -163,9 +158,12 @@
     <button class="direct">click me</button>
     <div class="container">
       <div id="order-list-container" class="order-list-container hidden">
-        <div id="order-list" class="order-list">
-          <div id="order-list-scroll" class="order-list-scroll"></div>
-        </div>
+        <div
+          id="order-list"
+          class="order-list"
+          ,
+          style="overflow: scroll; height: 400px; margin-left: -600px"
+        ></div>
       </div>
       <div class="card">
         <form id="personal-form">
