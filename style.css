@@ -460,6 +460,12 @@ img {
 }
 #customer-service {
   padding-top: 500px;
+  width: 100%;
+}
+.form {
+  height: 600px;
+  width: 80%;
+  padding-left: 40%;
 }
 .vid {
   width: 50%;
