@@ -464,7 +464,7 @@ img {
 }
 .form {
   height: 600px;
-  width: 80%;
+  width: 100%;
   padding-left: 40%;
 }
 .vid {
@@ -472,10 +472,10 @@ img {
   height: 75%;
 }
 .cs-from {
-  margin-left: 120px;
+  width: 100%;
+  float: right;
 }
 .form-group {
-  position: relative;
   margin-bottom: 20px;
 }
 
@@ -508,6 +508,10 @@ img {
   margin: auto;
   padding: 20px;
   box-sizing: border-box;
+  margin-left: 50%;
+}
+.message {
+  height: 200px;
 }
 
 .form-row {
