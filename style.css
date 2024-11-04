@@ -471,3 +471,74 @@ img {
   width: 50%;
   height: 50%;
 }
+.cs-from {
+  margin-left: 120px;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  margin-top: 5px;
+}
+.label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 14px;
+  background: white;
+  padding: 0 5px;
+  color: #393285;
+}
+
+.cs-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  position: relative;
+}
+
+.message {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: white;
+  padding: 0 5px;
+}
+
+.message {
+  resize: none;
+}

@@ -117,24 +117,34 @@
           <source src="hero_1.mp4" type="video/mp4" />
         </video>
       </div>
-      <div class="form">
-        <form action="send_email.php" method="post">
-          <label for="firstName">First Name:</label>
-          <input type="text" id="firstName" name="firstName" required />
-          <br />
-
-          <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" required />
-          <br />
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-          <br />
-
-          <input type="submit" value="Send" />
-        </form>
+      <div class="cs-form">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" class="name" placeholder=" " required />
+            <label class="label">Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" class="email" placeholder=" " required />
+            <label class="label">Email</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" class="phone" placeholder=" " required />
+            <label class="label">Phone Number</label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="subject" placeholder=" " required />
+            <label class="label">Subject</label>
+          </div>
+        </div>
+        <div class="form-group message-group">
+          <textarea class="message" placeholder=" " required></textarea>
+          <label class="label">Message</label>
+        </div>
       </div>
     </section>
+
     <!-- <section id="about-us">
         <div class="about-us-form">
           <p class="aboutus-header">About Us</p>
