@@ -182,8 +182,6 @@ strong {
   font-weight: 600;
   font-size: 25px;
   user-select: none;
-  margin-top: 200px;
-  margin-bottom: 100px;
 }
 #home {
   height: 100%;
@@ -193,11 +191,8 @@ strong {
 #order {
   max-height: 100%;
   max-width: 100%;
-  margin-top: 100px;
+  padding-top: 100px;
   margin-bottom: 0;
-}
-#faq {
-  margin-top: 20%;
 }
 .order-form {
   width: 800px;
@@ -212,9 +207,6 @@ strong {
 }
 .image1 {
   width: 100%;
-  float: right;
-  margin-top: 75px;
-  margin-bottom: 200px;
 }
 .home-content {
   width: 100%;
@@ -476,8 +468,8 @@ img {
   padding-left: 40%;
 }
 .vid {
-  width: 50%;
-  height: 50%;
+  width: 75%;
+  height: 75%;
 }
 .cs-from {
   margin-left: 120px;
