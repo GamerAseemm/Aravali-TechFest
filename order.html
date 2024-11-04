@@ -139,6 +139,7 @@
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         padding-right: 20px;
         position: fixed;
+        overflow-y: auto;
       }
 
       .list-item {
@@ -163,19 +164,25 @@
       .order-list-item {
         margin-bottom: 10px;
       }
+      .order-list {
+        height: 100%; /* Set to 100% of the parent container */
+        overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+      }
+
+      .product-form {
+        height: 100%; /* Set to 100% of the parent container */
+      }
+
+      /* Ensure both elements have the same height */
+      .order-list,
+      .product-form {
+        min-height: 100%; /* Set minimum height to 100% */
+      }
     </style>
   </head>
   <body>
     <button class="direct">click me</button>
     <div class="container">
-      <div id="order-list-container" class="order-list-container hidden">
-        <div
-          id="order-list"
-          class="order-list"
-          ,
-          style="overflow: scroll; height: 400px; margin-left: -600px"
-        ></div>
-      </div>
       <div class="card">
         <form id="personal-form">
           <div class="form-group">
@@ -249,6 +256,9 @@
 
         <form id="product-form" class="hidden">
           <div class="form-group">
+            <div id="order-list-container" class="order-list-container hidden">
+              <div id="order-list" class="order-list"></div>
+            </div>
             <input type="text" class="form bookname" placeholder=" " required />
             <label>Book Name</label>
           </div>
