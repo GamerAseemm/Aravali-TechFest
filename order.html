@@ -14,9 +14,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #f7f7f7;
-        background-image: url("https://img.freepik.com/premium-photo/playful-minimalistic-flat-design-with-abstract-shapes-decorative-dots-clean-background_912383-8500.jpg?semt=ais_hybrid");
-        background-repeat: none;
+        background-repeat: no-repeat;
+        background-image: url(WhatsApp\ Image\ 2024-11-04\ at\ 09.29.13_35de7ff4.jpg);
+        background-size: 100%;
+        backdrop-filter: blur(1px);
       }
 
       .card {
@@ -118,6 +119,16 @@
         height: 100vh;
         justify-content: space-between;
         align-items: center;
+        backdrop-filter: blur(10px);
+        opacity: 85%;
+        transition: opacity 1s;
+      }
+      .container:hover {
+        opacity: 100%;
+
+        body {
+          backdrop-filter: blur(5px);
+        }
       }
 
       .order-list {
