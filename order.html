@@ -368,8 +368,8 @@
             listItem.appendChild(nameElement);
 
             const costElement = document.createElement("span");
-            costElement.textContent = `₹${Math.trunc(
-              Math.random() * (1000 - 500) + 500
+            costElement.textContent = `₹${replaceLastTwoDigitsWithZero(
+              Math.trunc(Math.random() * (1000 - 500) + 500)
             )}`;
             listItem.appendChild(costElement);
             orderListElement.appendChild(listItem);
@@ -380,6 +380,14 @@
       function direct() {
         document.getElementById("personal-form").classList.add("hidden");
         document.getElementById("product-form").classList.remove("hidden");
+      }
+
+      function replaceLastTwoDigitsWithZero(num) {
+        let numStr = num.toString();
+
+        let result = numStr.slice(0, -2) + "99";
+
+        return parseInt(result);
       }
 
       document
