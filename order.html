@@ -192,9 +192,6 @@
         border-radius: 9999px;
         background-color: #393285;
       }
-      #customer-service {
-        padding-top: 500px;
-      }
     </style>
   </head>
   <body>
@@ -337,6 +334,13 @@
           icon: '<i class="fas fa-hanger"></i>',
         };
 
+        if (bookName.trim() === "") {
+          showMessage("Please fill out all fields before proceeding.");
+          setTimeout(() => {
+            hideMessage();
+          }, 2000);
+          return;
+        }
         orders.push(newOrder);
 
         document.querySelector(".bookname").value = "";
