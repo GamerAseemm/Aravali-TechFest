@@ -464,7 +464,7 @@ img {
 }
 .form {
   height: 600px;
-  width: 100%;
+  width: 80%;
   padding-left: 40%;
 }
 .vid {
@@ -472,10 +472,10 @@ img {
   height: 75%;
 }
 .cs-from {
-  width: 100%;
-  float: right;
+  margin-left: 120px;
 }
 .form-group {
+  position: relative;
   margin-bottom: 20px;
 }
 
@@ -508,10 +508,6 @@ img {
   margin: auto;
   padding: 20px;
   box-sizing: border-box;
-  margin-left: 50%;
-}
-.message {
-  height: 200px;
 }
 
 .form-row {
@@ -524,11 +520,6 @@ img {
   position: relative;
 }
 
-.message {
-  width: 100%;
-  box-sizing: border-box;
-}
-
 .form-group input {
   width: 100%;
   padding: 10px;
@@ -539,10 +530,10 @@ img {
   position: absolute;
   top: -10px;
   left: 10px;
-  background-color: white;
   padding: 0 5px;
 }
 
 .message {
   resize: none;
+  height: 200px;
 }
