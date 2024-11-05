@@ -563,3 +563,15 @@ img {
 .chatbot {
   margin-bottom: 20px;
 }
+.submit-btn {
+  color: white;
+  background-color: #393285;
+  border-radius: 8px;
+  border: none;
+  padding: 15px;
+  font-size: 15px;
+  transition: all 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 30%;
+}
