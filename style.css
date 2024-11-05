@@ -546,7 +546,11 @@ img {
   max-width: 60%;
   font-size: 35px;
   padding: 0 20px;
+  margin-bottom: -5px;
 }
 .home-content h1 {
+  max-width: 40%;
+}
+.home-content p {
   max-width: 40%;
 }
