@@ -552,6 +552,16 @@ img {
   color: white;
 }
 
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  position: relative;
+}
+
 .message {
   resize: none;
   height: 200px;
