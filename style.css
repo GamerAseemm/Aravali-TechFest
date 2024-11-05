@@ -516,9 +516,9 @@ img {
   margin-top: -40%;
   background: rgb(85, 85, 255);
   background: linear-gradient(
-    90deg,
+    45deg,
     rgba(85, 85, 255, 0.9) 35%,
-    rgba(23, 82, 208, 0.9) 100%
+    rgba(21, 65, 159, 0.9) 100%
   );
   border-radius: 10px;
 }
