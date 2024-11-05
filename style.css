@@ -474,10 +474,6 @@ img {
   border: none;
   width: 65%;
   height: 65%;
-  user-select: none;
-}
-video:focus {
-  outline: none;
 }
 
 .cs-from {
@@ -492,7 +488,7 @@ video:focus {
 .form-group textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 1em;
@@ -564,4 +560,8 @@ video:focus {
 }
 .home-content p {
   max-width: 40%;
+}
+
+.chatbot {
+  margin-bottom: 20px;
 }
