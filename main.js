@@ -32,3 +32,4 @@ function myFunction() {
   document.getElementById("phone").value = "";
   document.getElementById("email").value = "";
 }
+document.getElementById("s-b").addEventListener("click", myFunction);
