@@ -471,9 +471,11 @@ img {
   padding-left: 40%;
 }
 .vid {
+  border: none;
   width: 65%;
   height: 65%;
 }
+
 .cs-from {
   margin-left: 120px;
 }
@@ -497,9 +499,8 @@ img {
   top: -10px;
   left: 10px;
   font-size: 14px;
-  background: white;
   padding: 0 5px;
-  color: #393285;
+  color: black;
 }
 
 .cs-form {
@@ -512,11 +513,23 @@ img {
   padding: 20px;
   box-sizing: border-box;
   margin-left: 50%;
-  margin-top: -30%;
+  margin-top: -40%;
+  background: rgb(85, 85, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(85, 85, 255, 0.9) 35%,
+    rgba(23, 82, 208, 0.9) 100%
+  );
+  border-radius: 10px;
+}
+.cs-line {
+  color: #393285;
+  font-weight: 600;
+  margin-top: -40px;
 }
 
 .form-row {
-  display: flex;
+  display: inline-flex;
   gap: 20px;
 }
 
@@ -533,9 +546,10 @@ img {
 
 .label {
   position: absolute;
-  top: -10px;
-  left: 10px;
+  top: -15px;
+  left: 0px;
   padding: 0 5px;
+  color: white;
 }
 
 .message {
@@ -562,6 +576,24 @@ img {
 
 .chatbot {
   margin-bottom: 20px;
+}
+.cs-form h1 {
+  color: white;
+}
+.cs-form p {
+  color: white;
+}
+.cs-form input {
+  border: none;
+}
+.cs-form input:focus {
+  outline: none;
+}
+.cs-form textarea {
+  border: none;
+}
+.cs-form textarea:focus {
+  outline: none;
 }
 .submit-btn {
   color: white;
