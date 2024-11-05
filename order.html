@@ -240,9 +240,25 @@
         font-size: 0.75em;
         color: #393285;
       }
+      .backimg {
+        width: 40px;
+        height: 40px;
+      }
+      .backbtn {
+        background-color: rgba(255, 255, 255, 0);
+        position: fixed;
+        border: 0px solid;
+        margin-right: 94%;
+        margin-top: -40%;
+      }
     </style>
   </head>
   <body>
+    <button class="backbtn">
+      <a href="index.html#order">
+        <img class="backimg" src="chevron-back-circle.svg" alt=""
+      /></a>
+    </button>
     <div class="container">
       <div class="card">
         <form id="personal-form">
@@ -299,6 +315,7 @@
         </form>
       </div>
     </div>
+
     <script>
       let orders = [];
 
