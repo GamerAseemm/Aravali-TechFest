@@ -537,3 +537,16 @@ img {
   resize: none;
   height: 200px;
 }
+
+.home-header {
+  background-color: #e6eaee;
+  display: inline-block;
+  border-radius: 15px;
+  margin-left: 50px;
+  max-width: 60%;
+  font-size: 35px;
+  padding: 0 20px;
+}
+.home-content h1 {
+  max-width: 40%;
+}
