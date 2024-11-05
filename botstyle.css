@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #292460;
+  background-color: #6720cb;
   height: 54px;
   padding: 0 20px;
   width: 100%;
@@ -30,7 +30,7 @@
   transition: background-color 0.2s ease;
 }
 .chatbot__header:hover {
-  background-color: #393285;
+  background-color: #7226e0;
 }
 .chatbot__header p {
   margin-right: 20px;
