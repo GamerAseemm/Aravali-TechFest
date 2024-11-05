@@ -80,21 +80,45 @@
         <p class="cs-line">Not sure of something? Contact us.</p>
         <div class="form-row">
           <div class="form-group">
-            <input type="text" class="name" placeholder=" " required />
+            <input
+              type="text"
+              id="name"
+              class="name"
+              placeholder=" "
+              required
+            />
             <label class="label">Name</label>
           </div>
           <div class="form-group">
-            <input type="email" class="email" placeholder=" " required />
+            <input
+              type="email"
+              id="email"
+              class="email"
+              placeholder=" "
+              required
+            />
             <label class="label">Email</label>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <input type="text" class="phone" placeholder=" " required />
+            <input
+              type="text"
+              id="phone"
+              class="phone"
+              placeholder=" "
+              required
+            />
             <label class="label">Phone Number</label>
           </div>
           <div class="form-group">
-            <input type="text" class="subject" placeholder=" " required />
+            <input
+              type="text"
+              id="subject"
+              class="subject"
+              placeholder=" "
+              required
+            />
             <label class="label">Subject</label>
           </div>
         </div>
@@ -102,13 +126,14 @@
           <textarea
             style="padding-left: 75px"
             class="message"
+            id="message"
             placeholder=" "
             required
           ></textarea>
           <label class="label message">Message</label>
         </div>
         <div class="form-group message-group">
-          <button class="submit-btn" type="submit" onclick="SubmitEvent">
+          <button class="submit-btn" type="submit" onclick="myFunction">
             submit
           </button>
         </div>

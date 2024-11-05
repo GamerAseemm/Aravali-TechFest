@@ -134,15 +134,16 @@
 
       .order-list {
         width: 300px;
-
-        background-color: #fff;
+        color: white;
+        background-color: #0082fcd2;
+        backdrop-filter: blur(10px);
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         padding-right: 20px;
         position: fixed;
         overflow-y: auto;
-        margin-left: -100%;
+        margin-left: -120%;
         margin-top: -200px;
       }
 
@@ -251,6 +252,10 @@
         margin-right: 94%;
         margin-top: -40%;
       }
+      .btn-a {
+        text-decoration: none;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -289,6 +294,10 @@
               <input type="text" class="address" placeholder="" />
               <label>Address</label>
             </div>
+            <div class="form-group">
+              <input type="text" class="PIN-code" placeholder="" />
+              <label>PIN code</label>
+            </div>
           </div>
           <div class="error-message" style="display: none">
             Please fill out all fields before proceeding.
@@ -311,7 +320,10 @@
             <label>Book Author</label>
           </div>
 
-          <button type="submit" class="submit-btn">Submit Order</button>
+          <button type="submit" class="submit-btn">Add Order</button>
+          <button class="submit-btn buy-btn" onclick="myfunction">
+            <a class="btn-a" href="index.html#home">Buy Now</a>
+          </button>
         </form>
       </div>
     </div>
@@ -435,6 +447,10 @@
           submitOrder();
         });
       document.querySelector(".direct").addEventListener("click", direct);
+
+      function myfunction() {
+        window.location.href = "index.html";
+      }
     </script>
   </body>
 </html>
