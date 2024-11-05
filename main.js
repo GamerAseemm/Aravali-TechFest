@@ -25,3 +25,10 @@ toggles.forEach((toggle) => {
     toggle.parentNode.classList.toggle("active");
   });
 });
+function myFunction() {
+  document.getElementById("message").value = "";
+  document.getElementById("name").value = "";
+  document.getElementById("subject").value = "";
+  document.getElementById("phone").value = "";
+  document.getElementById("email").value = "";
+}
