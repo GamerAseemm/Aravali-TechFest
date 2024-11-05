@@ -471,10 +471,15 @@ img {
   padding-left: 40%;
 }
 .vid {
+  border: none;
   width: 65%;
   height: 65%;
-  margin-left: -5%;
+  user-select: none;
 }
+video:focus {
+  outline: none;
+}
+
 .cs-from {
   margin-left: 120px;
 }
