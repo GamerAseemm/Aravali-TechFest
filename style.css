@@ -295,6 +295,9 @@ h4 {
   padding-bottom: 0;
   margin-bottom: -25px;
 }
+#faq {
+  margin-top: 10%;
+}
 .h4 {
   color: #393285;
   font-size: 40px;
@@ -459,8 +462,8 @@ img {
   background-color: #393285;
 }
 #customer-service {
-  padding-top: 500px;
   width: 100%;
+  padding-top: 13%;
 }
 .form {
   height: 600px;
@@ -468,8 +471,9 @@ img {
   padding-left: 40%;
 }
 .vid {
-  width: 75%;
-  height: 75%;
+  width: 65%;
+  height: 65%;
+  margin-left: -5%%;
 }
 .cs-from {
   margin-left: 120px;
@@ -508,6 +512,8 @@ img {
   margin: auto;
   padding: 20px;
   box-sizing: border-box;
+  margin-left: 50%;
+  margin-top: -30%;
 }
 
 .form-row {
