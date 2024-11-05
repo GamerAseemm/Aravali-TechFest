@@ -288,5 +288,5 @@ strong {
   margin-bottom: 20px;
 }
 .chatbot__messages {
-  user-select: all;
+  user-select: text;
 }
