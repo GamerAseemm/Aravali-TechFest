@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "swup": "^4.8.1"
+    "@google/generative-ai": "^0.17.1",
+    "express": "^4.19.2",
+    "generative-ai": "^0.1.4"
   }
 }
