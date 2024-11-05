@@ -86,24 +86,13 @@ const showLoader = () => {
   if (loadingElem) $chatbotMessages.appendChild(loadingElem);
 };
 
-const escapeScript = (unsafe) => {
-  return unsafe
-    .replace(/</g, " ")
-    .replace(/>/g, " ")
-    .replace(/&/g, " ")
-    .replace(/"/g, " ")
-    .replace(/\\/, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-};
-
 const linkify = (inputText) => {
   return inputText.replace(urlPattern, `<a href='$1' target='_blank'>$1</a>`);
 };
 
 const validateMessage = () => {
   const text = $chatbotInput.value;
-  const safeText = text ? escapeScript(text) : "";
+  const safeText = text ? text : "";
   if (safeText.length && safeText !== " ") {
     resetInputField();
     userMessage(safeText);
@@ -142,7 +131,7 @@ const send = async (text = "") => {
     });
 
     const data = await response.json();
-    const botMessage = data.response;
+    const botMessage = parseMarkdown(data.response);
     if (data.response) {
       removeLoader();
       $chatbotMessages.innerHTML += `<li 
