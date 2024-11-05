@@ -287,3 +287,6 @@ strong {
   display: block;
   margin-bottom: 20px;
 }
+.chatbot__messages {
+  user-select: all;
+}
