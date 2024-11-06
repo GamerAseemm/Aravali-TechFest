@@ -1,7 +1,10 @@
 .select-box {
   position: relative;
-  width: 17rem;
+  width: 16.8rem;
   z-index: 999;
+}
+.countrycode {
+  padding-left: 10px;
 }
 .select-box input {
   width: 100%;
@@ -13,7 +16,9 @@
   outline: none;
   z-index: 999;
 }
-
+.codeselector {
+  width: 70%;
+}
 input[type="tel"] {
   border-radius: 0 0.5rem 0.5rem 0;
 }
