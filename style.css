@@ -647,3 +647,7 @@ img {
 .h1-name {
   font-size: 30px;
 }
+input {
+  border: 1px solid transparent;
+  outline: none;
+}

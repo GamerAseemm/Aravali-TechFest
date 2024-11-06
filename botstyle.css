@@ -16,6 +16,7 @@
 .chatbot.chatbot--closed {
   top: auto;
   width: 100%;
+  z-index: 1000;
 }
 .chatbot__header {
   color: #fff;
@@ -28,6 +29,7 @@
   width: 100%;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  border-radius: 10px;
 }
 .chatbot__header:hover {
   background-color: #7226e0;
