@@ -3,9 +3,7 @@
   width: 16.8rem;
   z-index: 999;
 }
-.countrycode {
-  padding-left: 10px;
-}
+
 .select-box input {
   width: 100%;
 
@@ -43,7 +41,7 @@ input[type="tel"] {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  padding-left: 3px;
+  padding-left: 2px;
 }
 
 .selected-option div::after {
