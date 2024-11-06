@@ -664,3 +664,10 @@ input {
   max-width: 60%;
   font-weight: 600;
 }
+.footer {
+  height: 50px;
+  width: 100%;
+  margin-left: 0;
+  margin: 0;
+  background-color: #393285;
+}
