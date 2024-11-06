@@ -4,7 +4,8 @@
   top: 0;
   bottom: 0;
   width: 100%;
-  box-shadow: 0 -6px 99px -17px rgba(0, 0, 0, 0.68);
+  padding-bottom: 30px;
+  box-shadow: 0 -6px 69px -17px rgba(0, 0, 0, 0.68);
 }
 @media screen and (min-width: 640px) {
   .chatbot {
@@ -17,6 +18,7 @@
   top: auto;
   width: 100%;
   z-index: 1000;
+  padding-bottom: 30px;
 }
 .chatbot__header {
   color: #fff;
@@ -24,7 +26,6 @@
   align-items: center;
   justify-content: space-between;
   background-color: #6720cb;
-  height: 54px;
   padding: 0 20px;
   width: 100%;
   cursor: pointer;
