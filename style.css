@@ -5,12 +5,14 @@
 html {
   scroll-behavior: smooth;
   width: 100%;
+  padding: 0;
 }
 
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0;
   padding-right: 3px;
   background-color: transparent;
+  display: none;
 }
 ::-webkit-scrollbar-thumb {
   background: #393285;
@@ -663,4 +665,22 @@ input {
   position: relative;
   height: 30px;
   clear: both;
+  width: 100%;
+}
+.div {
+  width: 100%;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+@viewport {
+  width: device-width;
+  initial-scale: 1;
+  viewport-fit: cover;
 }
