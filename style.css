@@ -667,6 +667,11 @@ input {
   height: 40px;
   clear: both;
   width: 100%;
+  color: white;
+}
+.footer p {
+  padding-top: 10px;
+  padding-left: 10px;
 }
 .div {
   width: 100%;
