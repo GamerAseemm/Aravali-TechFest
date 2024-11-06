@@ -617,6 +617,7 @@ img {
 }
 #about-us {
   margin-top: 30%;
+  padding-bottom: 25%;
   width: 100%;
 }
 .aboutus-upper-section {
@@ -625,7 +626,7 @@ img {
 }
 .aboutus-lower-section {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 10%;
 }
 .about-us-text {
   font-size: larger;
