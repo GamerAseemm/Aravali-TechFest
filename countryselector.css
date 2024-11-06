@@ -14,7 +14,6 @@
 
   outline: none;
   z-index: 999;
-  border-left: 0.05rem solid black;
 }
 .codeselector {
   width: 70%;
@@ -35,7 +34,7 @@ input[type="tel"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 0.05rem solid black;
+  cursor: pointer;
 }
 
 .selected-option div {
@@ -89,9 +88,9 @@ input[type="tel"] {
 input.search-box {
   background-color: var(--primary);
   color: black;
-  border-radius: 0.5rem 0.5rem 0 0;
   padding: 1.4rem 1rem;
   z-index: 999;
+  border: none;
 }
 
 .select-box ol {
@@ -112,7 +111,6 @@ input.search-box {
   width: 0.4rem;
   height: 3rem;
   background-color: #ccc;
-  border-radius: 0.4rem;
   z-index: 999;
 }
 
@@ -141,8 +139,4 @@ input[type="tel"] {
 }
 .select-box {
   padding-top: 5px;
-}
-input {
-  border: 1px solid transparent;
-  outline: none;
 }
