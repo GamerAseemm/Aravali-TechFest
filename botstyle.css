@@ -29,11 +29,13 @@
   width: 100%;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  border-radius: 10px;
+  transition: 0.3s;
 }
 .chatbot__header:hover {
   background-color: #7226e0;
+  border-radius: 10px;
 }
+
 .chatbot__header p {
   margin-right: 20px;
 }
@@ -59,6 +61,7 @@
   background-color: #fff;
   overflow-x: none;
   overflow-y: auto;
+  border-radius: 0;
 }
 @media screen and (min-width: 640px) {
   .chatbot__message-window {
