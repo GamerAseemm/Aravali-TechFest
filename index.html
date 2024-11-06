@@ -6,8 +6,9 @@
     <title>MEGALIB</title>
     <link rel="stylesheet" href="style.css " />
     <link rel="stylesheet" href="botstyle.css" />
+    <link rel="stylesheet" href="countryselector.css" />
     <link rel="shortcut icon" type="image/x-icon" href="icon.jpg" />
-
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -102,14 +103,28 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <input
-              type="text"
-              id="phone"
-              class="phone"
-              placeholder=" "
-              required
-            />
-            <label class="label">Phone Number</label>
+            <div class="select-box">
+              <div class="selected-option">
+                <div>
+                  <span class="iconify" data-icon="flag:gb-4x3"></span>
+                  <strong>+44</strong>
+                </div>
+                <input
+                  type="tel"
+                  class="tel"
+                  name="tel"
+                  placeholder="Phone Number"
+                />
+              </div>
+              <div class="options">
+                <input
+                  type="text"
+                  class="search-box"
+                  placeholder="Search Country Name"
+                />
+                <ol></ol>
+              </div>
+            </div>
           </div>
           <div class="form-group">
             <input
@@ -282,7 +297,7 @@
         />
       </symbol>
     </svg>
-
+    <script src="countryselector.js"></script>
     <script src="main.js"></script>
     <script src="bot.js"></script>
   </body>
