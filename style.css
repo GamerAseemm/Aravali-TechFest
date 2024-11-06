@@ -618,3 +618,31 @@ img {
   width: 30%;
   margin-left: 70%;
 }
+#about-us {
+  margin-top: 30%;
+  width: 100%;
+}
+.aboutus-upper-section {
+  text-align: center;
+  line-height: 10px;
+}
+.aboutus-lower-section {
+  width: 100%;
+  margin-top: 50px;
+}
+.about-us-text {
+  font-size: larger;
+}
+.aseemm {
+  float: right;
+  width: 50%;
+  text-align: center;
+}
+.jasnoor {
+  float: right;
+  width: 50%;
+  text-align: center;
+}
+.h1-name {
+  font-size: 30px;
+}
