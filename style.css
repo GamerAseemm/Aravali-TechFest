@@ -508,7 +508,7 @@ img {
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  max-width: 600px;
+  max-width: 40%;
   margin: auto;
   padding: 20px;
   box-sizing: border-box;
