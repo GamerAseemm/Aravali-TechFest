@@ -112,8 +112,11 @@ strong {
 }
 .nav-img {
   float: left;
-  margin-left: -70%;
-  margin-top: -8%;
+  margin-left: -65%;
+  margin-top: -4%;
+  font-family: "Horizon", sans-serif;
+  font-weight: 500;
+  font-size: 60px;
 }
 .nav {
   float: right;
