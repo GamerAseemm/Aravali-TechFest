@@ -1,6 +1,6 @@
 .select-box {
   position: relative;
-  width: 17rem;
+  width: 16.8rem;
   z-index: 999;
 }
 .select-box input {
@@ -15,11 +15,12 @@
 }
 
 input[type="tel"] {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: 0.1rem solid transparent;
+  outline: none;
   border-radius: 0 0.5rem 0.5rem 0;
-}
-
-.select-box input:focus {
-  border: 0.1rem solid var(--primary);
+  box-sizing: border-box;
 }
 
 .selected-option {
@@ -33,13 +34,11 @@ input[type="tel"] {
 }
 
 .selected-option div {
-  position: relative;
-
-  width: 6rem;
-  padding: 0 2.8rem 0 0.5rem;
-  text-align: center;
-  cursor: pointer;
-  z-index: 999;
+  width: 30%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding-left: 3px;
 }
 
 .selected-option div::after {
@@ -49,8 +48,6 @@ input[type="tel"] {
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
 
-  width: 0.8rem;
-  height: 0.8rem;
   border-right: 0.12rem solid var(--primary);
   border-bottom: 0.12rem solid var(--primary);
 
@@ -84,9 +81,6 @@ input[type="tel"] {
   left: 1rem;
   top: -1.2rem;
 
-  width: 0;
-  height: 0;
-  border: 0.6rem solid transparent;
   border-bottom-color: var(--primary);
   z-index: 999;
 }
@@ -144,4 +138,10 @@ input.search-box {
 
 .select-box ol li .country-name {
   margin-left: 0.4rem;
+}
+input[type="tel"] {
+  height: 2.67rem;
+}
+.select-box {
+  padding-top: 5px;
 }
