@@ -652,3 +652,15 @@ input {
   border: 1px solid transparent;
   outline: none;
 }
+
+.aseemm p {
+  margin-left: 20%;
+  max-width: 60%;
+  font-weight: 600;
+}
+
+.jasnoor p {
+  margin-left: 20%;
+  max-width: 60%;
+  font-weight: 600;
+}
