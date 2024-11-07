@@ -100,7 +100,7 @@ strong {
   margin-left: 25%;
   height: auto;
   padding-top: 20px;
-  padding-left: 15%;
+  padding-left: 21%;
   position: fixed;
   top: 0;
   transition: top 0.3s ease-in-out;
@@ -108,7 +108,7 @@ strong {
 }
 .nav-img {
   float: left;
-  margin-left: -65%;
+  margin-left: -87%;
   margin-top: -4%;
   font-family: "Horizon", sans-serif;
   font-weight: 500;
@@ -117,7 +117,7 @@ strong {
 .nav {
   float: right;
   margin-top: 15%;
-  margin-left: 25%;
+  margin-left: 45%;
 }
 .navbar li {
   display: block;
@@ -661,15 +661,18 @@ input {
 }
 .footer {
   background-color: #393285;
-  position: relative;
+  position: absolute;
   height: 40px;
   clear: both;
   width: 100%;
   color: white;
+  margin-bottom: -9%;
 }
 .footer p {
-  padding-top: 10px;
+  margin-top: -46px;
   padding-left: 10px;
+  float: left;
+  color: #ffffff;
 }
 .div {
   width: 100%;
@@ -691,17 +694,23 @@ html {
 .nav2 {
   width: 100%;
   list-style: none;
-  float: right;
-  align-items: center;
   position: relative;
+  background-color: #393285;
+  padding-bottom: 1px;
 }
-
 .nav2 ul li {
   display: inline;
+  margin: 0px 30px 0px 30px;
 }
 
 .nav2 a {
   text-decoration: none;
+  color: white;
+}
+.footer-text {
+  user-select: none;
+  cursor: default;
+  margin-right: 30%;
 }
 
 /* rating */

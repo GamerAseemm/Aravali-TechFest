@@ -18,14 +18,14 @@
   top: auto;
   width: 100%;
   z-index: 1000;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 .chatbot__header {
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #6720cb;
+  background-color: #393285;
   padding: 0 20px;
   width: 100%;
   cursor: pointer;
