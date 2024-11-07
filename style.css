@@ -693,6 +693,7 @@ html {
   list-style: none;
   float: right;
   align-items: center;
+  position: relative;
 }
 
 .nav2 ul li {
