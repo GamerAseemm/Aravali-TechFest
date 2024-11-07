@@ -723,6 +723,7 @@ html {
   display: flex;
   padding-bottom: 0.375em;
   position: relative;
+  padding-left: -30px;
 }
 .rating__star {
   display: block;
@@ -979,7 +980,8 @@ html {
 }
 .rating-container {
   position: relative;
-  bottom: -550px;
+  bottom: -530px;
+  width: auto;
   left: 50px;
 }
 .rating__label:hover .rating__star-stroke {
