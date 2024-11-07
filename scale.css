@@ -1,6 +1,7 @@
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   body {
     font-size: 14px;
+    overflow-x: hidden;
   }
 
   .cs-form {
@@ -14,7 +15,29 @@
     padding: 10px;
     position: static;
   }
-
+  #about-us {
+    margin-left: 17%;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .h1-name {
+    font-size: 100px;
+  }
+  .about-us-heading {
+    font-size: 100px;
+  }
+  #about-us p {
+    font-size: 50px;
+  }
+  .aseemm {
+    float: none;
+    width: 100%;
+  }
+  .jasnoor {
+    float: none;
+    width: 100%;
+  }
   .navbar ul {
     flex-direction: column;
     margin: 0;
@@ -84,40 +107,11 @@
   }
 
   .footer {
-    font-size: 14px;
-    padding: 5px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 24px;
-  }
-
-  .order-tagline {
-    font-size: 30px;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 36px;
-  }
-
-  h4 {
-    font-size: 20px;
-  }
-
-  .aboutus-upper-section,
-  .aboutus-lower-section {
-    margin: 0 auto;
-  }
-
-  .submit-btn {
-    font-size: 14px;
-  }
-
-  .footer p {
-    font-size: 12px;
+    background-color: #393285;
+    position: relative;
+    height: 40px;
+    clear: both;
+    width: 100%;
+    color: white;
   }
 }
