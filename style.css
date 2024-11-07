@@ -676,7 +676,6 @@ html {
   height: 100vh;
   box-sizing: border-box;
 }
-
 @viewport {
   width: device-width;
   initial-scale: 1;
@@ -709,7 +708,7 @@ html {
 /* rating */
 
 .rating {
-  margin: auto;
+  margin: 0px;
 }
 
 .rating__stars {
