@@ -257,5 +257,6 @@ body {
 .select-box {
   width: 24rem;
 }
-.tell {
+.codeselector {
+  margin-left: 5px;
 }
