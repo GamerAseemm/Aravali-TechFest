@@ -1,0 +1,261 @@
+body {
+  justify-content: center;
+  user-select: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-image: url(WhatsApp\ Image\ 2024-11-04\ at\ 09.29.13_35de7ff4.jpg);
+  background-size: 100%;
+  backdrop-filter: blur(1px);
+}
+
+.card {
+  padding: 20px;
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  width: auto;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #393285;
+  box-shadow: 0 0 8px rgba(57, 50, 133, 0.4);
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: #999;
+  font-size: 1em;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: 0.3s ease all;
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:not([value=""]) + label {
+  top: -2.5px;
+  left: 10px;
+  font-size: 0.75em;
+  color: #393285;
+}
+
+.submit-btn,
+.next-btn {
+  color: white;
+  background-color: #393285;
+  border-radius: 20px;
+  border: none;
+  padding: 15px;
+  font-size: 15px;
+  transition: all 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-btn:hover,
+.next-btn:hover {
+  background-color: #292460;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.24);
+}
+
+.submit-btn:active,
+.next-btn:active {
+  transform: scale(0.98);
+}
+
+.hidden {
+  display: none;
+}
+.region {
+  margin-top: 10px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  opacity: 85%;
+  transition: opacity 1s;
+  height: 600px;
+}
+.container:hover {
+  opacity: 100%;
+
+  body {
+    backdrop-filter: blur(5px);
+  }
+}
+
+.order-list {
+  width: 300px;
+  color: white;
+  background-color: #0082fcd2;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding-right: 20px;
+  position: fixed;
+  overflow-y: auto;
+  margin-left: -120%;
+  margin-top: -200px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 24px;
+  color: #393285;
+}
+
+.order-list-container.hidden {
+  display: none;
+}
+
+.order-list-container.show {
+  display: block;
+}
+
+.order-list-item {
+  margin-bottom: 10px;
+}
+.order-list {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.product-form {
+  height: 100%;
+}
+
+.order-list,
+.product-form {
+  min-height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: #393285;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.form-group {
+  position: relative;
+  margin: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: #999;
+  font-size: 1em;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: 0.3s ease all;
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:not([value=""]) + label {
+  top: -2.5px;
+  left: 10px;
+  font-size: 0.75em;
+  color: #393285;
+}
+.backimg {
+  width: 40px;
+  height: 40px;
+}
+.backbtn {
+  background-color: rgba(255, 255, 255, 0);
+  position: fixed;
+  border: 0px solid;
+  margin-right: 94%;
+  margin-top: -40%;
+}
+.btn-a {
+  text-decoration: none;
+  color: white;
+}
+.option {
+  font-size: 20px;
+}
+.options {
+  padding-top: -20px;
+}
+.select-box {
+  width: 24rem;
+}
+.tell {
+}

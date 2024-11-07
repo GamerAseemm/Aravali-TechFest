@@ -1,2 +1,123 @@
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .cs-form {
+    max-width: 40%;
+  }
+
+  .navbar {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+    position: static;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .title {
+    font-size: 30px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .intro,
+  .aboutus-desc,
+  .order-content,
+  .faq-title {
+    font-size: 18px;
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .order-form {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
+  .place-order {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .faqs-container {
+    max-width: 90%;
+    max-height: auto;
+  }
+
+  .faq {
+    padding: 20px;
+  }
+
+  .cs-form {
+    width: 90%;
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  .footer {
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .order-tagline {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .aboutus-upper-section,
+  .aboutus-lower-section {
+    margin: 0 auto;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
 }
