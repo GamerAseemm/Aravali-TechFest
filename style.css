@@ -688,3 +688,17 @@ html {
   initial-scale: 1;
   viewport-fit: cover;
 }
+.nav2 {
+  width: 100%;
+  list-style: none;
+  float: right;
+  align-items: center;
+}
+
+.nav2 ul li {
+  display: inline;
+}
+
+.nav2 a {
+  text-decoration: none;
+}
