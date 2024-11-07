@@ -505,10 +505,8 @@ img {
   gap: 10px;
   width: 100%;
   max-width: 40%;
-  margin: auto;
   padding: 20px;
   box-sizing: border-box;
-  margin-left: 50%;
   margin-top: -40%;
   background: rgb(85, 85, 255);
   background: linear-gradient(
