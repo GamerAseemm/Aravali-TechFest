@@ -973,9 +973,18 @@ html {
 .rating-container {
   position: relative;
   bottom: -530px;
-  width: auto;
   left: 50px;
+  width: 30%;
 }
 .rating__label:hover .rating__star-stroke {
   stroke: black;
+}
+
+.nav2 a {
+  background: linear-gradient(90deg, #e4ff00, #2f4dbf, #e4ff00);
+  background-clip: text;
+  transition: color 0.5s;
+}
+.nav2 a:hover {
+  color: transparent;
 }
