@@ -293,6 +293,7 @@ h4 {
   height: 300px;
   padding-bottom: 0;
   margin-bottom: -25px;
+  margin-left: 30%;
 }
 #faq {
   margin-top: 10%;
@@ -998,5 +999,8 @@ html {
   display: none;
 }
 .openbtn {
+  display: none;
+}
+.logo {
   display: none;
 }

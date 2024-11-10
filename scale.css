@@ -68,9 +68,15 @@
   }
   .image1 {
     margin-left: 15%;
-    padding-bottom: -40%;
+    padding-bottom: -60%;
+  }
+  .bookshelf {
+    width: 80%;
+    height: 80%;
+    margin-top: -120%;
   }
   .logo {
+    display: block;
     left: 5%;
     font-family: "Horizon", sans-serif;
     font-weight: 500;
