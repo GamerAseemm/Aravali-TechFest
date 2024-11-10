@@ -1,4 +1,66 @@
 @media (max-width: 1080px) {
+  /*sidepanel */
+  .openbtn {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 0;
+  }
+  .sidepanel {
+    display: block;
+    height: 250px;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+  }
+
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+
+  .openbtn:hover {
+    background-color: #444;
+  }
+  .home-content {
+    z-index: 1;
+    background-image: url(bg.avif);
+    background-repeat: no-repeat;
+  }
+  .image1 {
+    display: none;
+  }
   body {
     font-size: 14px;
     overflow-x: hidden;
@@ -9,11 +71,7 @@
   }
 
   .navbar {
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    padding: 10px;
-    position: static;
+    display: none;
   }
   #about-us {
     margin-left: 17%;
@@ -37,15 +95,6 @@
   .jasnoor {
     float: none;
     width: 100%;
-  }
-  .navbar ul {
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-  }
-
-  .navbar ul li {
-    margin: 10px 0;
   }
 
   .title {

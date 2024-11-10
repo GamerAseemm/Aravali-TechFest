@@ -988,3 +988,9 @@ html {
 .nav2 a:hover {
   color: transparent;
 }
+.sidepanel {
+  display: none;
+}
+.openbtn {
+  display: none;
+}

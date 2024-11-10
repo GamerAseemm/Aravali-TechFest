@@ -2,7 +2,7 @@ const accessToken = "3796899bd37c423bad3a21a25277bce0"; // Keeping for any requi
 const baseUrl = "/chat"; // Updated to the new API endpoint
 const sessionId = "20150910";
 const loader = `<span class='loader'><span class='loader__dot'></span><span class='loader__dot'></span><span class='loader__dot'></span></span>`;
-const errorMessage = "Im not working";
+const errorMessage = "Im not working as i have been not loaded with a server";
 const urlPattern =
   /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
 
