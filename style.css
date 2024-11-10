@@ -303,8 +303,8 @@ h4 {
 }
 .faqs-container {
   margin: 0 auto;
-  max-width: 600px;
-  max-height: 150px;
+  max-width: 60%;
+  max-height: 40%;
 }
 img {
   user-select: none;
@@ -623,14 +623,14 @@ img {
 }
 .aboutus-upper-section {
   text-align: center;
-  line-height: 10px;
+  padding-top: 30px;
+  width: 100%;
 }
 .aboutus-lower-section {
   width: 100%;
   margin-top: 10%;
 }
 .about-us-text {
-  font-size: larger;
   font-weight: 600;
 }
 .aseemm {
@@ -978,6 +978,9 @@ html {
   bottom: -530px;
   left: 50px;
   width: 30%;
+}
+.rating-container h1 {
+  font-size: 40px;
 }
 .rating__label:hover .rating__star-stroke {
   stroke: black;

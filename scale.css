@@ -92,6 +92,7 @@
   }
 
   .order-header {
+    margin-top: 30px;
     font-size: 80px;
   }
 
@@ -115,12 +116,15 @@
   .h1-name {
     font-size: 100px;
   }
-  .about-us-heading {
-    font-size: 100px;
+  .aboutus-upper-section h1 {
+    font-size: 80px;
+    font-weight: 800;
   }
+
   #about-us p {
-    font-size: 50px;
+    font-size: 45px;
   }
+
   .aseemm {
     float: none;
     width: 100%;
@@ -138,13 +142,40 @@
 
   .intro,
   .aboutus-desc,
-  .order-content,
-  .faq-title {
+  .order-content {
     font-size: 18px;
     max-width: 90%;
     margin: auto;
   }
 
+  .faq-title {
+    font-size: 50px;
+    width: 100%;
+  }
+  .faqs-container {
+    align-items: center;
+  }
+  .faq {
+    width: 100%;
+    margin-left: -15%;
+  }
+  .faq-toggle {
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+  }
+  .faq-text {
+    font-size: 45px;
+  }
+  .faqimg {
+    width: 100%;
+    height: 100%;
+    margin-left: 20%;
+  }
+  .lowersection {
+    margin-left: 10%;
+    width: 150%;
+  }
   .order-form {
     width: 90%;
     height: auto;
@@ -159,15 +190,6 @@
     padding: 40px;
     margin-top: 40px;
     border-radius: 999px;
-  }
-
-  .faqs-container {
-    max-width: 90%;
-    max-height: auto;
-  }
-
-  .faq {
-    padding: 20px;
   }
 
   .cs-form {
@@ -224,5 +246,20 @@
   .chatbot__submit {
     width: 50px;
     height: 50px;
+  }
+
+  .rating-container {
+    bottom: -400px;
+    height: auto;
+    width: 50%;
+    font-size: 80px;
+  }
+
+  .rating__star {
+    width: 100px;
+    height: 100px;
+  }
+  .footer {
+    display: none;
   }
 }
