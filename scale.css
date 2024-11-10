@@ -4,7 +4,7 @@
     display: block;
     position: fixed;
     top: 20px;
-    right: 0;
+    right: 20%;
   }
   .sidepanel {
     display: block;
@@ -13,7 +13,7 @@
     position: fixed;
     z-index: 1;
     top: 0;
-    right: 0;
+    right: 18%;
     background-color: #111;
     overflow-x: hidden;
     padding-top: 60px;
@@ -42,7 +42,7 @@
   }
 
   .openbtn {
-    font-size: 20px;
+    font-size: 50px;
     cursor: pointer;
     background-color: #111;
     color: white;
@@ -53,23 +53,40 @@
   .openbtn:hover {
     background-color: #444;
   }
-  .home-content {
-    z-index: 1;
-    background-image: url(bg.avif);
-    background-repeat: no-repeat;
+  .home-header {
+    font-size: 50px;
+  }
+  .home-content h1 {
+    max-width: 60%;
+  }
+  .home-content p {
+    max-width: 60%;
   }
   .image1 {
-    display: none;
+    margin-left: 15%;
+    padding-bottom: -40%;
   }
-  body {
-    font-size: 14px;
-    overflow-x: hidden;
+
+  .image2 {
+    margin-left: -15%;
   }
 
   .cs-form {
-    max-width: 40%;
+    max-width: min(100px, 40%);
   }
 
+  .order-header {
+    font-size: 80px;
+  }
+
+  .order-tagline {
+    font-size: 70px;
+  }
+  .order-form p {
+    font-size: 40px;
+    margin-left: 0;
+    max-width: 60%;
+  }
   .navbar {
     display: none;
   }
@@ -121,10 +138,11 @@
   }
 
   .place-order {
-    font-size: 20px;
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
+    font-size: 50px;
+    width: 50%;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 999px;
   }
 
   .faqs-container {
