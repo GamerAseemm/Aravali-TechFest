@@ -4,27 +4,28 @@
     display: block;
     position: fixed;
     top: 20px;
-    right: 20%;
+    right: 5%;
   }
   .sidepanel {
     display: block;
-    height: 250px;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
-    right: 18%;
+    right: 0;
     background-color: #111;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
+    padding-bottom: 5px;
   }
 
   .sidepanel a {
-    padding: 8px 8px 8px 32px;
+    padding-left: 15px;
+    padding-bottom: 15px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 35px;
+    color: #ffffff;
     display: block;
     transition: 0.3s;
   }
@@ -36,9 +37,11 @@
   .sidepanel .closebtn {
     position: absolute;
     top: 0;
-    left: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    left: 15px;
+    font-size: 50px;
+  }
+  .hidden-sidepanel {
+    margin-top: -200px;
   }
 
   .openbtn {
@@ -48,6 +51,7 @@
     color: white;
     padding: 10px 15px;
     border: none;
+    transition: all 0.3s;
   }
 
   .openbtn:hover {
@@ -66,13 +70,25 @@
     margin-left: 15%;
     padding-bottom: -40%;
   }
-
+  .logo {
+    left: 5%;
+    font-family: "Horizon", sans-serif;
+    font-weight: 500;
+    font-size: 80px;
+    position: fixed;
+    z-index: 1000;
+    transition: all 0.3s;
+  }
   .image2 {
-    margin-left: -15%;
+    margin-left: -25%;
   }
 
   .cs-form {
-    max-width: min(100px, 40%);
+    margin-left: 5%;
+  }
+
+  .vid {
+    display: none;
   }
 
   .order-header {
@@ -168,11 +184,45 @@
   }
 
   .footer {
-    background-color: #393285;
-    position: relative;
-    height: 40px;
-    clear: both;
     width: 100%;
-    color: white;
+    padding: 0;
+    clear: both;
+    bottom: 0;
+    position: relative;
+    right: 0;
+    background-color: #393285;
+  }
+  .chatbot__header {
+    padding-left: 5%;
+    font-size: 35px;
+    width: 150%;
+    margin-left: -45%;
+  }
+  .chatbot__close-button.icon-speech {
+    width: 50px;
+  }
+  .chatbot__close-button.icon-close {
+    width: 50px;
+  }
+  .chatbot__message-window {
+    width: 150%;
+    margin-left: -45%;
+  }
+  .chatbot__messages li .is-ai__profile-picture .icon-avatar {
+    width: 60px;
+    height: 60px;
+    padding-top: 5%;
+  }
+  .chatbot__message {
+    font-size: 40px;
+  }
+  .chatbot__input {
+    margin-left: -55%;
+    width: 170%;
+    font-size: 40px;
+  }
+  .chatbot__submit {
+    width: 50px;
+    height: 50px;
   }
 }

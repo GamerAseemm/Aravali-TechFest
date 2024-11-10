@@ -1,6 +1,8 @@
 let lastScrollTop = 0;
 const navbar = document.querySelector(".navbar");
 let disableScrollDetection = false;
+const sidepanel = document.querySelector(".openbtn");
+const logo = document.querySelector(".logo");
 
 window.addEventListener("scroll", function () {
   if (disableScrollDetection) return;
@@ -8,14 +10,24 @@ window.addEventListener("scroll", function () {
 
   if (scrollTop > lastScrollTop) {
     navbar.classList.add("hidden-navbar");
+    sidepanel.classList.add("hidden-sidepanel");
+    logo.classList.add("hidden-sidepanel");
   } else {
     navbar.classList.remove("hidden-navbar");
+    sidepanel.classList.remove("hidden-sidepanel");
+    logo.classList.remove("hidden-sidepanel");
   }
 
   lastScrollTop = scrollTop;
 });
 document.querySelectorAll(".navbar a").forEach((link) => {
   link.addEventListener("click", function () {});
+});
+document.querySelectorAll(".sidepanel a").forEach((link) => {
+  link.addEventListener("click", function () {
+    document.getElementById("sidepanel").style.width = "0";
+    logo.classList.remove("hidden-sidepanel");
+  });
 });
 
 const toggles = document.querySelectorAll(".faq-toggle");
@@ -93,7 +105,7 @@ class StarRating {
   }
 }
 function openNav() {
-  document.getElementById("sidepanel").style.width = "250px";
+  document.getElementById("sidepanel").style.width = "350px";
 }
 
 function closeNav() {
